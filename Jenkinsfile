@@ -9,7 +9,7 @@ pipeline {
        CI = 'true'
    }
    stages {
-      stage('env') {
+      stage('Start') {
         steps {
           notifyStarted()
         }
