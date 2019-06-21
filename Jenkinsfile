@@ -34,7 +34,7 @@ pipeline {
     }
     post {
       success {
-        notifySuccessful()
+        notifySuccess()
       }
       failure {
         notifyFailed()
@@ -46,7 +46,7 @@ def notifyStarted() {
   slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 }
 
-def notifySuccessful() {
+def notifySuccess() {
   slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 }
 
