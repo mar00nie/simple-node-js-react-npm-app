@@ -26,32 +26,6 @@ jobs:
     - put: notify
       params:
         alert_type: started
-    - task: build-app
-      file: node-app/task-build.yml
-      on_success:
-        put: notify
-        params:
-          alert_type: success
-      on_failure:
-        put: notify
-        params:
-          alert_type: failed
-    - put: notify
-      params:
-        alert_type: started
-    - task: test-app
-      file: node-app/task-test.yml
-      on_success:
-        put: notify
-        params:
-          alert_type: success
-      on_failure:
-        put: notify
-        params:
-          alert_type: failed
-    - put: notify
-      params:
-        alert_type: started
     - task: deploy-app
       file: node-app/task-deploy.yml
       on_success:
