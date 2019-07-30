@@ -9,4 +9,9 @@ inputs:
 - name: node-app
 
 run:
-  path: node-app/jenkins/scripts/test.sh
+  path: sh
+    args:
+    - -c
+    - |
+      cd node-app
+      npm test
