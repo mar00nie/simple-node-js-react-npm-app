@@ -1,0 +1,19 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: node}
+
+inputs:
+- name: node-app
+
+run:
+  path: sh
+  args:
+  - -c
+  - |
+    node -v
+    npm -v
+    cd node-app
+    npm install

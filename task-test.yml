@@ -1,0 +1,12 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: node}
+
+inputs:
+- name: node-app
+
+run:
+  path: /node-app/jenkins/scripts/test.sh
