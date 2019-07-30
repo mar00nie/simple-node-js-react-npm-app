@@ -24,7 +24,6 @@ jobs:
     - put: notify
       params:
         alert_type: started
-        message: Started: Build
     - get: node-app
       trigger: true
     - task: build-app
