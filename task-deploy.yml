@@ -14,6 +14,4 @@ run:
   - -c
   - |
     cd node-app
-    ./jenkins/scripts/deliver.sh
-    echo 'Finished using the web site? (Click "Proceed" to continue)'
-    ./jenkins/scripts/kill.sh
+    npm start
