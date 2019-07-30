@@ -14,9 +14,4 @@ run:
   - -c
   - |
     cd node-app
-    set -x
-    npm install --save-dev cross-env
-    set +x
-    set -x
-    set --watchAll
-    npm test 
+    ./jenkins/scripts/test.sh 
