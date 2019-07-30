@@ -14,4 +14,7 @@ run:
   - -c
   - |
     cd node-app
+    set -x
+    set +x
+    set -x
     npm test
