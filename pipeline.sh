@@ -6,7 +6,7 @@ fly -t node-app up -p build-test-deploy
 
 # Trigger pipeline jobs
 
-fly -t node-app tj -j build-test-deploy/run-tests -w
+fly -t node-app tj -j build-test-deploy/run-pipeline -w
 
 # List of builds
 fly -t node-app builds

@@ -18,7 +18,7 @@ resources:
 
 
 jobs:
-  - name: run-tests
+  - name: run-pipeline
     public: true
     plan:
     - get: node-app
