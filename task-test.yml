@@ -10,8 +10,8 @@ inputs:
 
 run:
   path: sh
-    args:
-    - -c
-    - |
-      cd node-app
-      npm test
+  args:
+  - -c
+  - |
+    cd node-app
+    npm test
