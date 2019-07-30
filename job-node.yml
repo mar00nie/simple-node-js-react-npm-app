@@ -26,6 +26,7 @@ jobs:
     - put: notify
       params:
         alert_type: started
+        message: Started: Build
     - task: build-app
       file: node-app/task-build.yml
       on_success:
@@ -39,6 +40,7 @@ jobs:
     - put: notify
       params:
         alert_type: started
+        message: Started: Test
     - task: test-app
       file: node-app/task-test.yml
       on_success:
@@ -52,6 +54,7 @@ jobs:
     - put: notify
       params:
         alert_type: started
+        message: Started: Deploy
     - task: deploy-app
       file: node-app/task-deploy.yml
       on_success:
