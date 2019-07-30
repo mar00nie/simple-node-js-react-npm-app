@@ -21,12 +21,12 @@ jobs:
   - name: run-pipeline
     public: true
     plan:
-    - get: node-app
-      trigger: true
     - put: notify
       params:
         alert_type: started
         message: Started: Build
+    - get: node-app
+      trigger: true
     - task: build-app
       file: node-app/task-build.yml
       on_success:
